@@ -9,8 +9,12 @@ export function Login() {
   const location = useLocation();
   const { login, register } = useAuthStore();
   const [mode, setMode] = useState<'signin' | 'signup'>('signin');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  // Pre-filled for this personal, localhost-only install so signing in is a
+  // single click — this is only reachable behind VITE_USE_API in the first
+  // place. Remove this if the app is ever meant for more than one person or
+  // reachable beyond your own machine.
+  const [email, setEmail] = useState('joshgabadams@gmail.com');
+  const [password, setPassword] = useState('password');
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
 
