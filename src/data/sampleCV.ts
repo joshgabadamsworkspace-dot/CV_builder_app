@@ -1,7 +1,8 @@
 import type { CVData } from '../types/cv';
+import { createPortfolioDefaults } from './portfolioDefaults';
 
 export const sampleCV: CVData = {
-  schemaVersion: 1, version: 1, id: 'joshua-general', profileName: 'Joshua Gabriel — General', updatedAt: new Date().toISOString(),
+  schemaVersion: 2, version: 1, id: 'joshua-general', profileName: 'Joshua Gabriel — General', updatedAt: new Date().toISOString(),
   personal: {
     fullName: 'Joshua Gabriel', email: 'joshgabadams@gmail.com', phone: '0815 790 3044', secondaryPhone: '0911 414 3793',
     nationality: 'Nigerian', maritalStatus: 'Single', linkedIn: 'https://linkedin.com/in/joshua-gabriel',
@@ -46,4 +47,5 @@ export const sampleCV: CVData = {
       { key: 'references', label: 'References', enabled: true },
     ],
   },
+  portfolio: createPortfolioDefaults(),
 };
