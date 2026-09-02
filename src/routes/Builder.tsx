@@ -96,7 +96,7 @@ export function Builder() {
         <div className="preview-scroll">
           {builderTab === 'cv'
             ? <CVDocument cv={cv} zoom={zoom} onPageCount={setPages} />
-            : <div className={`portfolio-frame viewport-${portfolioViewport}`}><PortfolioPage cv={cv} embedded onDownloadCV={downloadPDF} /></div>}
+            : <div className={`portfolio-frame viewport-${portfolioViewport}`}><PortfolioPage cv={cv} embedded /></div>}
         </div>
       </section>
     </div>

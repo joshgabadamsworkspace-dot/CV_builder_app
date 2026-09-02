@@ -44,5 +44,5 @@ export function PortfolioPreview() {
   if (status === 'loading') return <main className="public-status"><p>Loading full preview…</p></main>;
   if (status === 'not-found' || !cv) return <main className="public-status"><h1>Preview unavailable</h1><p>This portfolio could not be loaded.</p></main>;
 
-  return <PortfolioPage cv={cv} onDownloadCV={() => window.open(`/builder/${encodeURIComponent(cv.id)}/cv`, '_blank', 'noopener,noreferrer')} />;
+  return <PortfolioPage cv={cv} />;
 }

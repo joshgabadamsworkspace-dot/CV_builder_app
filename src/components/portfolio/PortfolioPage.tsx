@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, type CSSProperties, type ComponentType } from 'react';
+import { createPortal } from 'react-dom';
 import {
   ArrowLeft, ArrowRight, BarChart3, Code2, Download, ExternalLink, Facebook, Github,
   Instagram, Layout, Linkedin, Mail, Menu, MessageCircle, Monitor, Moon, Smartphone, Sun, Twitter, UserRound, X,
@@ -6,6 +7,7 @@ import {
 import { levelToProficiency } from '../../data/portfolioDefaults';
 import { deriveSectors, filterProjectsBySector, projectExternalUrl, projectSector } from '../../lib/portfolio';
 import type { CVData, PortfolioService } from '../../types/cv';
+import { CVDocument } from '../preview/CVDocument';
 
 type PortfolioStyle = CSSProperties & Record<`--portfolio-${string}`, string>;
 type ServiceStyle = CSSProperties & { '--service-accent': string };
@@ -51,7 +53,7 @@ const serviceIcons: Record<PortfolioService['icon'], ComponentType> = {
   chart: BarChart3,
 };
 
-export function PortfolioPage({ cv, embedded = false, onDownloadCV }: { cv: CVData; embedded?: boolean; onDownloadCV?: () => void }) {
+export function PortfolioPage({ cv, embedded = false }: { cv: CVData; embedded?: boolean }) {
   const [filter, setFilter] = useState('All');
   const [testimonial, setTestimonial] = useState(0);
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -104,7 +106,22 @@ export function PortfolioPage({ cv, embedded = false, onDownloadCV }: { cv: CVDa
     setMobileMenu(false);
   };
 
-  return <main className={`portfolio-site portfolio-${resolvedMode} ${embedded ? 'portfolio-embedded' : ''}`} style={style} data-color-mode={colorMode}>
+  const downloadCV = () => {
+    const previousTitle = document.title;
+    document.title = cv.settings.fileName || `${cv.personal.fullName.replaceAll(' ', '_')}_CV`;
+    document.body.classList.add('printing-portfolio-cv');
+    let fallback: number | undefined;
+    const cleanup = () => {
+      document.body.classList.remove('printing-portfolio-cv');
+      document.title = previousTitle;
+      if (fallback !== undefined) window.clearTimeout(fallback);
+    };
+    window.addEventListener('afterprint', cleanup, { once: true });
+    window.print();
+    fallback = window.setTimeout(cleanup, 60_000);
+  };
+
+  return <><main className={`portfolio-site portfolio-${resolvedMode} ${embedded ? 'portfolio-embedded' : ''}`} style={style} data-color-mode={colorMode}>
     <nav className="portfolio-nav" aria-label="Portfolio navigation">
       <button className="portfolio-wordmark" onClick={() => goTo('home')} aria-label="Go to home"><span>{cv.personal.fullName.trim().charAt(0) || 'J'}</span><strong>{cv.personal.fullName || 'My Portfolio'}</strong></button>
       <button className="portfolio-menu-button" onClick={() => setMobileMenu((open) => !open)} aria-expanded={mobileMenu} aria-label="Toggle navigation">{mobileMenu ? <X/> : <Menu/>}</button>
@@ -114,7 +131,7 @@ export function PortfolioPage({ cv, embedded = false, onDownloadCV }: { cv: CVDa
         <button className={colorMode === 'light' ? 'active' : ''} onClick={() => setColorMode('light')} aria-label="Use light colour mode" title="Light theme"><Sun/></button>
         <button className={colorMode === 'dark' ? 'active' : ''} onClick={() => setColorMode('dark')} aria-label="Use dark colour mode" title="Dark theme"><Moon/></button>
       </div>
-      <button className="portfolio-accent-button portfolio-download" onClick={onDownloadCV}><Download/> Download CV</button>
+      <button className="portfolio-accent-button portfolio-download" onClick={downloadCV}><Download/> Download CV</button>
     </nav>
 
     {portfolio.sections.hero && <section className="portfolio-hero portfolio-section" id="home">
@@ -194,7 +211,7 @@ export function PortfolioPage({ cv, embedded = false, onDownloadCV }: { cv: CVDa
       <div className="portfolio-socials">{socialLinks.filter(([url]) => url).map(([url, Icon, label]) => <a key={label} href={url} target="_blank" rel="noreferrer" aria-label={label}><Icon/></a>)}</div>
       <div className="portfolio-copyright">© {new Date().getFullYear()} <strong>{cv.personal.fullName}</strong> {portfolio.footerNote}</div>
     </footer>
-  </main>;
+  </main>{createPortal(<div className="portfolio-cv-print" aria-hidden="true"><CVDocument cv={cv} zoom={1}/></div>, document.body)}</>;
 }
 
 function SectionHeading({ title, body, centered = false }: { title: string; body?: string; centered?: boolean }) {
