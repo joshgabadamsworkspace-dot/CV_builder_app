@@ -10,6 +10,7 @@ import { useAuthStore } from './store/useAuthStore';
 const Dashboard = lazy(() => import('./routes/Dashboard').then((m) => ({ default: m.Dashboard })));
 const Builder = lazy(() => import('./routes/Builder').then((m) => ({ default: m.Builder })));
 const PublicPortfolio = lazy(() => import('./routes/PublicPortfolio').then((m) => ({ default: m.PublicPortfolio })));
+const PortfolioPreview = lazy(() => import('./routes/PortfolioPreview').then((m) => ({ default: m.PortfolioPreview })));
 
 export default function App() {
   const refresh = useAuthStore((s) => s.refresh);
@@ -23,6 +24,7 @@ export default function App() {
       <Route path="/login" element={<Login />} />
       <Route element={<AuthGate />}>
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/preview/portfolio/:profileId" element={<PortfolioPreview />} />
         <Route path="/builder/:profileId/:tab" element={<Builder />} />
         <Route path="/builder/:profileId" element={<Navigate to="cv" replace />} />
       </Route>

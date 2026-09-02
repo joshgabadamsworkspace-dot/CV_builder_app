@@ -16,3 +16,16 @@ export function deriveSectors(projects: Project[]): string[] {
 export function filterProjectsBySector(projects: Project[], sector: string): Project[] {
   return sector === 'All' ? projects : projects.filter((project) => projectSector(project) === sector);
 }
+
+/** Makes user-entered project domains external even when the protocol was
+ * omitted. Relative paths and non-web protocols are rejected. */
+export function projectExternalUrl(value?: string): string | undefined {
+  const raw = value?.trim();
+  if (!raw || raw.startsWith('/') || raw.startsWith('#')) return undefined;
+  try {
+    const parsed = new URL(/^[a-z][a-z\d+.-]*:/i.test(raw) ? raw : `https://${raw}`);
+    return parsed.protocol === 'http:' || parsed.protocol === 'https:' ? parsed.toString() : undefined;
+  } catch {
+    return undefined;
+  }
+}

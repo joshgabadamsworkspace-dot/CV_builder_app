@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Check, Download, FileJson, LayoutDashboard, Menu, Minus, Palette, Plus, Upload, X } from 'lucide-react';
+import { Check, Download, FileJson, LayoutDashboard, Maximize2, Menu, Minus, Palette, Plus, Upload, X } from 'lucide-react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { CVDocument } from '../components/preview/CVDocument';
 import { Editor } from '../components/editor/Editor';
@@ -64,6 +64,10 @@ export function Builder() {
   };
   const print = () => { document.title = `${cv.settings.fileName || cv.personal.fullName.replaceAll(' ', '_') + '_CV'}`; window.print(); };
   const downloadPDF = () => { if (builderTab !== 'cv') { switchBuilderTab('cv'); setTimeout(print, 120); } else print(); };
+  const openPortfolioPreview = () => {
+    try { localStorage.setItem(`portfolio-preview:${cv.id}`, JSON.stringify(cv)); } catch { /* The saved profile remains available as a fallback. */ }
+    window.open(`/preview/portfolio/${encodeURIComponent(cv.id)}`, '_blank', 'noopener,noreferrer');
+  };
 
   if (status === 'loading') return <main className="route-loading"><p>Loading your CV…</p></main>;
   if (status === 'not-found') return <main className="route-loading"><p>We couldn't find that CV in this browser.</p><button className="primary" onClick={() => navigate('/dashboard')}>Back to dashboard</button></main>;
@@ -87,7 +91,7 @@ export function Builder() {
         <div className="preview-toolbar app-ui">
           {builderTab === 'cv'
             ? <><div className="zoom"><button onClick={() => setZoom(Math.max(.5, zoom - .15))}><Minus /></button><button className="zoom-value" onClick={() => setZoom(.75)}>{Math.round(zoom * 100)}%</button><button onClick={() => setZoom(Math.min(1.25, zoom + .15))}><Plus /></button></div><strong>{pages} {pages === 1 ? 'Page' : 'Pages'}</strong>{pages > 4 && <span className="page-warning">Consider Compact spacing</span>}<button className="primary" onClick={downloadPDF}><Download />Download PDF</button></>
-            : <><div className="viewport-switch">{(['desktop', 'tablet', 'mobile'] as const).map((v) => <button key={v} className={portfolioViewport === v ? 'active' : ''} onClick={() => setPortfolioViewport(v)}>{v[0].toUpperCase() + v.slice(1)}</button>)}</div><button className="primary" onClick={downloadPDF}><Download />Download PDF</button></>}
+            : <><div className="viewport-switch">{(['desktop', 'tablet', 'mobile'] as const).map((v) => <button key={v} className={portfolioViewport === v ? 'active' : ''} onClick={() => setPortfolioViewport(v)}>{v[0].toUpperCase() + v.slice(1)}</button>)}</div><button className="secondary" onClick={openPortfolioPreview} title="Open full-size portfolio preview in a new tab"><Maximize2 />Full preview</button><button className="primary" onClick={downloadPDF}><Download />Download PDF</button></>}
         </div>
         <div className="preview-scroll">
           {builderTab === 'cv'

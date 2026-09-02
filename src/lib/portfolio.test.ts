@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { deriveSectors, filterProjectsBySector, projectSector } from './portfolio';
+import { deriveSectors, filterProjectsBySector, projectExternalUrl, projectSector } from './portfolio';
 import type { Project } from '../types/cv';
 
 const project = (overrides: Partial<Project> & { id: string }): Project => ({ title: 'Title', order: 0, ...overrides });
@@ -21,4 +21,17 @@ describe('filterProjectsBySector', () => {
   const projects = [project({ id: '1', sector: 'Web' }), project({ id: '2', sector: 'Data' })];
   it('returns everything for "All"', () => { expect(filterProjectsBySector(projects, 'All')).toHaveLength(2); });
   it('filters to a single sector', () => { expect(filterProjectsBySector(projects, 'Data').map((p) => p.id)).toEqual(['2']); });
+});
+
+describe('projectExternalUrl', () => {
+  it('adds https to a bare project domain instead of making it a localhost path', () => {
+    expect(projectExternalUrl('example.com/my-project')).toBe('https://example.com/my-project');
+    expect(projectExternalUrl('www.example.com')).toBe('https://www.example.com/');
+  });
+
+  it('preserves full web URLs and rejects relative or unsafe URLs', () => {
+    expect(projectExternalUrl('http://example.com/demo')).toBe('http://example.com/demo');
+    expect(projectExternalUrl('/local-project')).toBeUndefined();
+    expect(projectExternalUrl('javascript:alert(1)')).toBeUndefined();
+  });
 });
