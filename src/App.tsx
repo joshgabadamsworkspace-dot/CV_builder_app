@@ -4,12 +4,13 @@ import { AuthGate, HomeRoute, USE_API } from './routes/AuthGate';
 import { Login } from './routes/Login';
 import { useAuthStore } from './store/useAuthStore';
 
-// Route-level code splitting: Landing/Login are the first paint and stay
-// small; Builder (editor + CVDocument + portfolio editor) and PublicPortfolio
-// pull in the heavier chunks, so they're loaded on demand only.
+// Route-level code splitting keeps the public portfolio and editor bundles
+// separate. The public portfolio is the homepage; the CV builder remains
+// available at /cv-builder and its existing editor routes.
 const Dashboard = lazy(() => import('./routes/Dashboard').then((m) => ({ default: m.Dashboard })));
 const Builder = lazy(() => import('./routes/Builder').then((m) => ({ default: m.Builder })));
 const PublicPortfolio = lazy(() => import('./routes/PublicPortfolio').then((m) => ({ default: m.PublicPortfolio })));
+const PortfolioHome = lazy(() => import('./routes/PortfolioHome').then((m) => ({ default: m.PortfolioHome })));
 const PortfolioPreview = lazy(() => import('./routes/PortfolioPreview').then((m) => ({ default: m.PortfolioPreview })));
 
 export default function App() {
@@ -20,7 +21,8 @@ export default function App() {
 
   return <Suspense fallback={<main className="route-loading"><p>Loading…</p></main>}>
     <Routes>
-      <Route path="/" element={<HomeRoute />} />
+      <Route path="/" element={<PortfolioHome />} />
+      <Route path="/cv-builder" element={<HomeRoute />} />
       <Route path="/login" element={<Login />} />
       <Route element={<AuthGate />}>
         <Route path="/dashboard" element={<Dashboard />} />

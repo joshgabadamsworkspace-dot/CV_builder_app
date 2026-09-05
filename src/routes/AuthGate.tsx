@@ -16,9 +16,8 @@ export function AuthGate() {
   return <Outlet />;
 }
 
-/** `/` itself: the local-only build's first-run landing page in the default
- *  build; in API mode there's no point browsing it anonymously, so route
- *  straight to sign-in or the dashboard. */
+/** Entry point for the CV-builder UI. The public site itself is served at `/`;
+ *  this route is mounted at `/cv-builder`. */
 export function HomeRoute() {
   const { status } = useAuthStore();
   if (!USE_API) return <Landing />;
