@@ -1,10 +1,10 @@
 import { PortfolioPage } from '../components/portfolio/PortfolioPage';
-import { sampleCV } from '../data/sampleCV';
+import publishedPortfolio from '../data/publishedPortfolio.json';
 import { migrateProfile } from '../lib/schema';
 
 // The production homepage must use repository-backed data rather than
 // IndexedDB: visitors do not share the browser storage used by the editor.
-const portfolio = migrateProfile(sampleCV);
+const portfolio = migrateProfile(publishedPortfolio);
 
 export function PortfolioHome() {
   return <PortfolioPage cv={portfolio} />;

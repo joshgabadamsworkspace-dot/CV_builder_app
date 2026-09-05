@@ -1,0 +1,524 @@
+{
+  "schemaVersion": 2,
+  "version": 505,
+  "id": "9a55e04a-c985-404b-a922-7b2e10e711da",
+  "profileName": "Joshua Gabriel — Imported",
+  "updatedAt": "2026-09-05T11:10:03.612Z",
+  "personal": {
+    "fullName": "Joshua Gabriel",
+    "email": "joshgabadams@gmail.com",
+    "phone": "08157903044",
+    "secondaryPhone": "09114143793",
+    "nationality": "Nigerian",
+    "maritalStatus": "Single",
+    "linkedIn": "https://www.linkedin.com/in/joshua-gabriel-b54701402?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    "whatsapp": "https://wa.me/message/RRQZQRJCNUTVM1",
+    "portfolio": "portfolio.joshgabadams.com",
+    "github": "https://github.com/joshgabadams"
+  },
+  "summary": {
+    "headline": "Data Scientist | Web Developer",
+    "text": "I design and develop data-driven digital solutions that improve decision-making, operational efficiency, and business performance. With two (2) years work experience in Data Science and Engineering, Data Analytics, Systems Integration, Data Migration, Dashboard Development, Business Intelligence, and Software Development, with practical application across banking, fintech, and digital environments. \nI work with Python, SQL, Excel, Power BI, APIs and Web Services, AI technologies, and modern web development stacks to build reliable data pipelines, interactive dashboards, analytical systems, and scalable digital applications. I am particularly focused on transforming operational and business data into accessible, actionable insights and efficient digital solutions. \nWith hands-on experience in core banking operations, performance reporting, data management, systems development, and business intelligence, I combine analytical thinking, prompt engineering, and modern UI/UX principles to create scalable, user-focused products that deliver measurable business value. Location State of Residence: Federal Capital Territory Region: North Central LGA: Municipal Area Council (AMAC) Address: A10 Gishiri, Opp Police Station, Maitama Extension, Nicon-Junction. Country: Nigeria"
+  },
+  "location": {
+    "state": "Federal Capital Territory",
+    "region": "North Central",
+    "lga": "Abuja Muncipal Area Council (AMAC)",
+    "address": "A10 Gishiri, Opp Police Station, Maitama Extension, Nicon-Junction.",
+    "country": "Nigeria"
+  },
+  "experiences": [
+    {
+      "id": "5a7c4f01-9466-4f82-9ef2-c66fe167f6ba",
+      "jobTitle": "IT OFFICER",
+      "organization": "Microbiz Inclusion Centre, Abuja",
+      "startDate": "Apr 2026",
+      "current": true,
+      "description": "Supported the organization’s technology operations, i build, develop and monitor digital systems, web and mobile applications to improve operational efficency. My role involves providing technical support, managing IT-related incidents, supporting internal digital operations, improving user experience across all our products and services, contributing to the development of IT governance and operational processes. I also worked extensively with business and operational data, developing performance reports, KPI dashboards, and data-driven insights using dashboard tools to support management decision-making and organizational performance monitoring.",
+      "achievements": [],
+      "technologies": [],
+      "order": 0,
+      "keepTogether": true,
+      "employmentType": "Full Time"
+    },
+    {
+      "id": "bbe73ef0-eb74-494b-a841-1e87acc073d7",
+      "jobTitle": "FOUNDER & LEAD INSTRUCTOR",
+      "organization": "Aceth Academy, Abuja",
+      "startDate": "Jan 2026",
+      "current": true,
+      "description": "Founded and run a technology-focused academy, that trains students with practical education in data science, web development, digital skills and certification courses. Currently graduated 2 students with awarded certifications in data analytics and business intelligence. ",
+      "achievements": [
+        "Conduct technical training and classes focused on practical application in data analysis.",
+        "Mentor and guide students through structured learning paths, practical projects, and portfolio development.",
+        "Setup physical and virtual classes for students, training from beginner to foundational and intermediate concepts in data analysis, Python, web development, databases, and related technologies. ",
+        "Provide training materials, exercises, projects, and learning resources to support technical skill.",
+        "Supervise student projects and provide technical feedback, code reviews, and guidance throughout their course programme duration. ",
+        "Manage Aceth academy's learning activities, course certifications, curriculum development, and overall technical direction."
+      ],
+      "technologies": [],
+      "order": 1,
+      "keepTogether": true,
+      "employmentType": "Virtual"
+    },
+    {
+      "id": "43e50a3a-83c0-45c6-a001-f790af688ab2",
+      "jobTitle": "DATA ANALYST ",
+      "organization": "NIgerian Education Data Initiative (NEDI) | Federal Ministry of Education, Abuja",
+      "startDate": "Mar 2026",
+      "current": true,
+      "description": "Selected through a UNDP Sponsored Graduate Intership Programme and placed with the Nigerian Education Data Initiative under the Federal Ministry of Education. Currently onboarding, validating, managing, analysing, and reporting of educational data within the National School Database Management System. ",
+      "achievements": [
+        "Developed a full end-to-end democore for Data Ingestion, Validation, Staging and Production using PHP & SQLite. ",
+        "Designed and implemented a complete data engineering pipeline using over 5,000 NECO and JAMB datasets records, load tracking, data quality validation rules, quarantine handling, and analytics. ",
+        "Built a production-style serving and visualization layer featuring a live dashboard portal with authentication, KPI cards, interactive charts, and filtered views. "
+      ],
+      "technologies": [],
+      "order": 2,
+      "keepTogether": true,
+      "employmentType": "Hybrid"
+    },
+    {
+      "id": "425daed9-3b59-4adc-bf52-97baf65a5be2",
+      "jobTitle": "IT / PROJECT MANAGEMENT",
+      "organization": "ACCEL AFRICA – Rural Empowerment Development and Intervention Foundation (RENDIF), Niger State",
+      "startDate": "Sep 2025",
+      "current": true,
+      "description": "Supported a digital education intervention in Niger State by implementing the PezuAfrica Student Database Management System, training teachers on digital attendance tracking, sensitizing parents and community stakeholders, and collaborating to improve school participation and educational outcomes.",
+      "achievements": [],
+      "technologies": [],
+      "order": 3,
+      "keepTogether": true,
+      "employmentType": "Contract"
+    },
+    {
+      "id": "5c0ed2cc-ad1e-4bee-b2a7-792b9246850a",
+      "jobTitle": "DATA ANALYST",
+      "organization": "Microbiz Microfinance Bank, Abuja",
+      "startDate": "Jan 2025",
+      "endDate": "Jan 2026",
+      "current": false,
+      "description": "Prepare periodic business reporting and analysis (monthly, weekly, and daily), develop live performance dashboards, data entry & migration, design staff incentive calculators, analyze client and customer traffic, and deliver business trend insights to drive growth and expansion.",
+      "achievements": [],
+      "technologies": [],
+      "order": 4,
+      "keepTogether": true
+    },
+    {
+      "id": "fbe1637c-e863-4923-927b-392e30298cf5",
+      "jobTitle": "PROCUREMENT OFFICER",
+      "organization": "Setraco Nigeria Limited, Abuja",
+      "startDate": "Sep 2023",
+      "endDate": "Aug 2024",
+      "current": false,
+      "description": "Completed NYSC with a construction company, in the procurement through order requisition, sourcing of materials and services, price comparison sheets, supplier management, contract negotiation, market analys is to ensure quality, cost-effective, timely project delivery and general office management.",
+      "achievements": [],
+      "technologies": [],
+      "order": 5,
+      "keepTogether": true,
+      "employmentType": "NYSC"
+    },
+    {
+      "id": "9740166e-fe28-4f97-9f27-77e3ea3585b6",
+      "jobTitle": "Computer Operator",
+      "organization": "Victory Cyber World, Lafia ",
+      "startDate": "May 2018",
+      "endDate": "Sep 2021",
+      "current": false,
+      "description": "Service provider/graphics designer, working with MS office packages, Typing, online payments/registrations, Corel Graphics Suite, Printing/Photocopying and other office related tasks",
+      "achievements": [],
+      "technologies": [],
+      "order": 6,
+      "keepTogether": true
+    }
+  ],
+  "education": [
+    {
+      "id": "d7d78272-a189-47d7-b251-ba06a191194c",
+      "qualification": "Bachelor in Sciences (B.Sc)",
+      "institution": "Federal University of Lafia - Nasarawa State.",
+      "startYear": "2018",
+      "current": true,
+      "order": 0,
+      "fieldOfStudy": "Statistics",
+      "endYear": "2023"
+    },
+    {
+      "id": "42f9874e-2de3-43a4-8f4a-81bb3f7f76d9",
+      "qualification": "West Africa Examination Certificate ",
+      "institution": "Methodist Comprehensive College, Lafia - Nasarawa State",
+      "startYear": "2011",
+      "endYear": "2017",
+      "current": false,
+      "order": 1,
+      "fieldOfStudy": "(WAEC)"
+    },
+    {
+      "id": "d3b9d9c8-8eb1-4c74-bb24-d674055b3aca",
+      "qualification": "First School Leaving Certificate",
+      "institution": "Harmony Daycare Nursery & Primary School, Lafia - Nasarawa State",
+      "startYear": "2002",
+      "endYear": "2010",
+      "current": false,
+      "description": "",
+      "order": 2,
+      "fieldOfStudy": "(FSLC)"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "e7079b42-9d27-42ad-b3fe-528b6da1f534",
+      "name": "Fraud Investigation Using Artificial Intelligence & Digital Forensics",
+      "order": 0,
+      "issuer": "Chartered Institute of Bankers of Nigeria (CIBN)",
+      "date": "Aug 2026"
+    },
+    {
+      "id": "313ae1d3-61e7-4bdc-98c4-2074ac99f2e2",
+      "name": "Certificate of National Service - NYSC",
+      "order": 1,
+      "issuer": "Nigerian Youth Service Corps",
+      "date": "Aug 2024"
+    },
+    {
+      "id": "7c89f509-c2fd-4211-bff4-421b03d37f68",
+      "name": "Certificate of Completion",
+      "date": "",
+      "order": 2,
+      "issuer": "Digital Skills Programme",
+      "items": [
+        "Product Design | UI/UX - Coursera",
+        "Python Programming - CodewithMosh",
+        "National Directorate of Employment (NDE)"
+      ]
+    },
+    {
+      "id": "cb14ec6e-d569-4e7f-b51d-de55c8ecd976",
+      "name": "B.Sc Statistics - Second Class (Upper Credit)",
+      "issuer": "Federal University of Lafia",
+      "order": 3,
+      "date": "2023"
+    },
+    {
+      "id": "e8691a8b-303a-431d-ad66-fe2753b15e20",
+      "name": "Certificate of Service - Financial Secretary",
+      "order": 4,
+      "issuer": "Financial Secretary | Federal University of Lafia - Association of Statistics Students of Nigeria",
+      "date": "2023"
+    },
+    {
+      "id": "d8080dd1-0884-4011-acae-1f41dd0e0f41",
+      "name": "Best Graduating Student",
+      "date": "2010",
+      "order": 5,
+      "issuer": "Macmillian Books"
+    }
+  ],
+  "skills": [
+    {
+      "id": "04853e7f-148c-4386-8782-ca4c4b4d0da1",
+      "name": "Data Analysis & Reporting",
+      "order": 0,
+      "proficiency": 90,
+      "level": "Advanced"
+    },
+    {
+      "id": "103c6cb9-5b13-4790-a94c-d9344623fc5e",
+      "name": "Power BI",
+      "order": 1,
+      "proficiency": 80,
+      "level": "Advanced"
+    },
+    {
+      "id": "46fecbe1-54a2-4ef1-836a-7d0ba9d9fa6c",
+      "name": "Web Development",
+      "order": 2,
+      "proficiency": 85,
+      "level": "Advanced"
+    },
+    {
+      "id": "85174acb-32f5-41cc-afbf-8ee0abd78cf1",
+      "name": "SQL",
+      "level": "Intermediate",
+      "order": 3,
+      "proficiency": 52
+    },
+    {
+      "id": "7d3f2568-2303-4951-92c7-2372f1eb17a3",
+      "name": "UI/UX",
+      "level": "Intermediate",
+      "order": 4,
+      "proficiency": 65
+    },
+    {
+      "id": "1b8c759f-723c-4df2-bc68-2110ba732bed",
+      "name": "Microsoft Excel",
+      "level": "Advanced",
+      "order": 5,
+      "proficiency": 95
+    },
+    {
+      "id": "1fea4943-d386-4aa5-82b5-7f0687b528a1",
+      "name": "Data Visualization",
+      "level": "Advanced",
+      "order": 6,
+      "proficiency": 78
+    },
+    {
+      "id": "930ff42f-bf63-412b-9fab-7243dcb7ec16",
+      "name": "Communication",
+      "level": "Advanced",
+      "order": 7,
+      "proficiency": 78
+    },
+    {
+      "id": "3a602f05-62b7-47aa-bb95-56548d17262a",
+      "name": "Front End Development",
+      "level": "Advanced",
+      "order": 8,
+      "proficiency": 88
+    },
+    {
+      "id": "390227dc-1e5d-4427-b85e-e30895d7e804",
+      "name": "System Design & Automation",
+      "level": "Intermediate",
+      "order": 9,
+      "proficiency": 64
+    },
+    {
+      "id": "e3623a52-6560-4696-838f-346cc9d97423",
+      "name": "Backend Development",
+      "level": "Intermediate",
+      "order": 10,
+      "proficiency": 73
+    },
+    {
+      "id": "e8b9264b-ec67-4c3e-ab7f-593e62e57521",
+      "name": "Procurement & Order Management",
+      "level": "Intermediate",
+      "order": 11,
+      "proficiency": 55
+    },
+    {
+      "id": "835536c8-b7dc-4f28-9633-8a39d60054b1",
+      "name": "AI & Prompt Engineering",
+      "level": "Advanced",
+      "order": 12,
+      "proficiency": 72
+    },
+    {
+      "id": "7126c4b1-a6b9-43ad-a32a-19097a6663f7",
+      "name": "Programming",
+      "level": "Advanced",
+      "order": 13,
+      "proficiency": 84
+    },
+    {
+      "id": "383141c2-9593-4e9b-baa7-a1e45b845388",
+      "name": "Data science",
+      "level": "Advanced",
+      "order": 14,
+      "proficiency": 81
+    },
+    {
+      "id": "c8b78c9c-7552-4618-936f-6f69ead1647f",
+      "name": "Project management",
+      "level": "Intermediate",
+      "order": 15,
+      "proficiency": 64
+    }
+  ],
+  "hobbies": [
+    {
+      "id": "593f30da-08b0-456f-b27c-89fc5ba98d0c",
+      "name": "Writing",
+      "order": 0
+    },
+    {
+      "id": "650c016a-f68b-4e87-9cbd-80c032b59b6c",
+      "name": "Puzzles ",
+      "order": 1
+    },
+    {
+      "id": "93e30d30-3e4d-42b4-a1e0-0332603b0546",
+      "name": "Problem Solving",
+      "order": 2
+    },
+    {
+      "id": "dcc061fc-78cb-42d5-adc7-da1ba2eb3897",
+      "name": "Basketball",
+      "order": 3
+    },
+    {
+      "id": "e2fab2ca-c140-4550-953f-0129ad44c721",
+      "name": "AI",
+      "order": 4
+    }
+  ],
+  "references": [],
+  "projects": [
+    {
+      "id": "5e210313-e590-4b47-8ca5-ba520c14c360",
+      "title": "School Database Management System",
+      "sector": "Web Development",
+      "tags": [],
+      "order": 0,
+      "url": "www.pezuafrica.com",
+      "image": "/portfolio-assets/projects-0-image.webp",
+      "date": "2026"
+    },
+    {
+      "id": "66043bd7-22b3-4cd1-85b0-5350f839e52f",
+      "title": "Eccomerce Store",
+      "sector": "Web Development",
+      "tags": [],
+      "order": 1,
+      "url": "www.koliaangelltd.com",
+      "date": "2025",
+      "image": "/portfolio-assets/projects-1-image.webp",
+      "featured": true
+    },
+    {
+      "id": "0763a629-bec8-4166-b4c6-c1758c3b87b0",
+      "title": "Technology",
+      "sector": "Web Development",
+      "tags": [],
+      "order": 2,
+      "url": "www.ressyn.com",
+      "date": "2025",
+      "subtitle": "Ressyn Technologies",
+      "image": "/portfolio-assets/projects-2-image.webp"
+    }
+  ],
+  "settings": {
+    "primary": "#1639B7",
+    "heading": "#071334",
+    "text": "#424242",
+    "muted": "#707070",
+    "skillBackground": "#E9EAED",
+    "headingFont": "Poppins",
+    "bodyFont": "Poppins",
+    "oneFont": true,
+    "bodySize": 11,
+    "density": "Compact",
+    "sectionSpacing": 12,
+    "atsMode": true,
+    "showSkillLevels": true,
+    "alphabeticalSkills": false,
+    "referencesOnRequest": true,
+    "fileName": "Joshua_Gabriel_CV",
+    "sections": [
+      {
+        "key": "summary",
+        "label": "Professional Summary",
+        "enabled": true
+      },
+      {
+        "key": "location",
+        "label": "Location",
+        "enabled": true
+      },
+      {
+        "key": "skills",
+        "label": "Skills",
+        "enabled": true
+      },
+      {
+        "key": "hobbies",
+        "label": "Hobbies / Interests",
+        "enabled": true
+      },
+      {
+        "key": "experiences",
+        "label": "Work Experience",
+        "enabled": true,
+        "startNewPage": true
+      },
+      {
+        "key": "education",
+        "label": "Education",
+        "enabled": true
+      },
+      {
+        "key": "certifications",
+        "label": "Certifications",
+        "enabled": true
+      },
+      {
+        "key": "projects",
+        "label": "Projects",
+        "enabled": false
+      },
+      {
+        "key": "references",
+        "label": "References",
+        "enabled": true
+      }
+    ]
+  },
+  "portfolio": {
+    "slug": "joshua-gabriel",
+    "published": true,
+    "heroImageAlt": "Professional portrait",
+    "aboutImageAlt": "Portrait for the About Me section",
+    "servicesIntro": "Practical digital services shaped around clear goals, thoughtful design, and measurable outcomes.",
+    "projectsIntro": "A selection of products, dashboards, and experiences built across data, web, and product design.",
+    "testimonialsIntro": "What collaborators and clients say about working together.",
+    "contactHeading": "Let's build something useful together",
+    "contactBody": "Have a project, opportunity, or idea in mind? Send a message and let us start a conversation.",
+    "footerNote": "All rights reserved.",
+    "sections": {
+      "hero": true,
+      "about": true,
+      "services": true,
+      "projects": true,
+      "testimonials": false,
+      "contact": true
+    },
+    "services": [
+      {
+        "id": "service-1",
+        "title": "Data Analytics",
+        "description": "Dashboards, reporting systems, and decision-ready insights from complex data.",
+        "icon": "chart",
+        "order": 0
+      },
+      {
+        "id": "service-2",
+        "title": "Web Development",
+        "description": "Responsive web experiences that are fast, accessible, and easy to maintain.",
+        "icon": "code",
+        "order": 1
+      },
+      {
+        "id": "service-3",
+        "title": "UI/UX Design",
+        "description": "Clear product flows and polished interfaces grounded in real user needs.",
+        "icon": "layout",
+        "order": 2
+      },
+      {
+        "id": "service-4",
+        "title": "Product Support",
+        "description": "Practical digital systems and ongoing improvements that help teams grow.",
+        "icon": "smartphone",
+        "order": 3
+      }
+    ],
+    "testimonials": [
+      {
+        "id": "testimonial-1",
+        "name": "Add a testimonial",
+        "role": "Client or collaborator",
+        "quote": "Use the portfolio editor to replace this sample with a real recommendation.",
+        "visible": true,
+        "order": 0
+      }
+    ],
+    "heroSummary": "I’m a Data & Technology professional passionate about turning complex data and business challenges into practical digital solutions. I combine data analytics, software development, business intelligence, and modern technology to build products that make businesses smarter, more efficient, and more data-driven.",
+    "heroImage": "/portfolio-assets/portfolio-heroimage.webp",
+    "publishedAt": "2026-09-02T12:29:53.678Z",
+    "aboutImage": "/portfolio-assets/portfolio-aboutimage.webp",
+    "aboutSummary": "With 2+ years of hands-on experience across Data Science & Engineering, Data Analytics, Systems Integration, Data Migration, Business Intelligence, Dashboard Development, and Software Development, I build reliable systems that connect data, technology, and business objectives.\n\nI work with Python, SQL, Excel, Power BI, APIs, AI technologies, and modern web development stacks to develop analytical systems, interactive dashboards, data pipelines, and scalable digital applications. My experience spans banking, fintech, and digital environments, giving me practical insight into operational processes, performance management, data systems, and technology-driven business transformation.\n\nI’m particularly interested in transforming raw operational and business data into actionable insights while creating user-focused digital products that deliver measurable value. I combine analytical thinking, prompt engineering, software development, and modern UI/UX principles to build solutions that are both technically sound and practical to use."
+  }
+}

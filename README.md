@@ -120,6 +120,22 @@ In the default local-only mode, the application is static after `npm run build`.
 
 Personal data remains in the current browser's IndexedDB unless the user explicitly downloads a JSON backup or uploads a document.
 
+### Publishing the personal homepage
+
+The homepage reads `src/data/publishedPortfolio.json`, not browser storage. To
+refresh it from the most recently updated published profile in the local SQLite
+database, start the local app with `npm run dev:all`, publish the intended
+profile, and then run:
+
+```bash
+npm run export:portfolio
+npm run build
+```
+
+The export also moves embedded profile/project images into
+`public/portfolio-assets/` and converts them to optimized WebP files when
+`cwebp` is installed. Commit the generated JSON and assets to deploy the update.
+
 ## Planned My Portfolio extension
 
 The audited end-to-end plan, implementation prompt, and shared progress ledger are in:

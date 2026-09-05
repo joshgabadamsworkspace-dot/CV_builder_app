@@ -15,7 +15,8 @@
     "test:e2e:auth": "playwright test -c playwright.auth.config.ts",
     "server": "tsx watch server/index.ts",
     "test:server": "vitest run server",
-    "dev:all": "concurrently -n vite,api -c blue,green \"npm:dev\" \"npm:server\""
+    "dev:all": "concurrently -n vite,api -c blue,green \"npm:dev\" \"npm:server\"",
+    "export:portfolio": "node scripts/export-published-portfolio.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
