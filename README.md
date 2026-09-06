@@ -122,19 +122,46 @@ Personal data remains in the current browser's IndexedDB unless the user explici
 
 ### Publishing the personal homepage
 
-The homepage reads `src/data/publishedPortfolio.json`, not browser storage. To
-refresh it from the most recently updated published profile in the local SQLite
-database, start the local app with `npm run dev:all`, publish the intended
-profile, and then run:
+The public homepage at `/` reads `src/data/publishedPortfolio.json`; it does not
+read IndexedDB or the local SQLite database at runtime. The CV-builder remains
+available at `/cv-builder` and `/dashboard`.
+
+To edit the portfolio locally, start both Vite and the Express/SQLite backend:
+
+```bash
+npm run dev:all
+```
+
+Open `http://localhost:5173/dashboard`, edit the intended profile, and mark it
+as published. Then export the most recently updated published profile, test it,
+and create the production build:
 
 ```bash
 npm run export:portfolio
+npx vitest run src
 npm run build
 ```
 
 The export also moves embedded profile/project images into
 `public/portfolio-assets/` and converts them to optimized WebP files when
-`cwebp` is installed. Commit the generated JSON and assets to deploy the update.
+`cwebp` is installed. Commit and push the generated JSON and assets to deploy
+the update:
+
+```bash
+git add .
+git commit -m "Update portfolio"
+git push origin main
+```
+
+Vercel must be connected to `joshgabadamsworkspace-dot/CV_builder_app`, with
+`main` configured as the production branch. Assign both `joshgabadams.com` and
+`www.joshgabadams.com` to that active project under **Settings → Domains**.
+Every successful push to `main` will then update the public portfolio.
+
+The Express/SQLite backend is local-only in the current deployment. Vercel
+serves the exported portfolio statically and does not start `server/index.ts`.
+A hosted database/API is only required to support signing in, editing, and
+publishing directly from the production website.
 
 ## Planned My Portfolio extension
 
